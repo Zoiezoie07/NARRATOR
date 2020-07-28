@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 const db = require("quick.db");
 
 module.exports = {
-  name: "spectate",
-  description: "to spectate a game",
+  name: "role",
+  description: "to give out roles",
   catgory: "game",
   run: async (bot, message, args) => {}
 };
