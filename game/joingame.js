@@ -11,7 +11,7 @@ module.exports = {
     if (message.guild.id != "729900329403154463") return;
     if (message.channel.id != "729900329667133459") {
       return message.channel.send(
-        `<@${message.author.id}>, this command can only be use in <#729900329667133459>`
+        `<@${message.author.id}>, this command can only be use in <#729900329667133459>.`
       );
     }
 
