@@ -6,6 +6,7 @@ module.exports = {
   description: "to edit the server link",
   catgory: "game",
   run: async (bot, message, args) => {
+    if (message.channel.id != "729900329944088600") return;
     let link = db.fetch(`link`);
     db.set(`link`, args[0]);
     message.channel.send(
