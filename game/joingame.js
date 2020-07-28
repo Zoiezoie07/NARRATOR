@@ -6,9 +6,15 @@ module.exports = {
   description: "to join a game",
   catgory: "game",
   run: async (bot, message, args) => {
-    if (message.guild.id != "729900329403154463") return;
     let status = db.fetch(`status`);
     if (status != "hosted") return;
+    if (message.guild.id != "729900329403154463") return;
+    if (message.channel.id != "729900329667133459") {
+      return message.channel.send(
+        `<@${message.author.id}>, this command can only be use in <#729900329667133459>`
+      );
+    }
+
     if (message.member.roles.cache.has("729900329659007070")) {
       message.member.roles.remove("729900329659007070").catch(console.error);
       message.member.roles.add("729900329659007074").catch(console.error);
