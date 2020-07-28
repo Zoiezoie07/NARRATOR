@@ -3,7 +3,7 @@ const db = require("quick.db");
 
 module.exports = {
   name: "host",
-  description: "host",
+  description: "to host",
   catgory: "game",
   run: async (bot, message, args) => {
     if (message.channel.id != "729900329944088600") return;
