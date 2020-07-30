@@ -11,7 +11,7 @@ module.exports = {
     let achannel = message.guild.channels.cache.get("728044277313306716");
     const embed = new MessageEmbed()
       .setTitle("New game starting!")
-      .setColor("RANDOM")
+      .setColor("#007167")
       .setDescription(
         `Game Host: <@${message.author.id}>\nInvite Link: ${link}`
       );
