@@ -15,7 +15,7 @@ module.exports = {
       );
     } else {
       message.channel.send(
-        `The status now is ${status}\nStatus List: hosted, started, ended`
+        `The status now is ${status}\nStatus List: **hosted**, **started**, **ended**.`
       );
     }
   }
