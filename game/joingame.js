@@ -21,5 +21,22 @@ module.exports = {
     } else {
       message.member.roles.add("729900329659007074").catch(console.error);
     }
+
+    let playerrole = message.guild.roles.cache.get("729900329659007074")
+      .members;
+
+    let playernumber = Math.floor(playerrole.size + 1);
+
+    if (playernumber > 12) {
+      return message.channel.send(
+        `<@${message.author.id}>, there are already 12 players in this game. Type \`=spectate\` to spectate.`
+      );
+    }
+
+    message.member.setNickname(playernumber);
+
+    let role = message.guild.roles.cache.find(r => r.name === playernumber);
+
+    message.member.roles.add(role);
   }
 };
